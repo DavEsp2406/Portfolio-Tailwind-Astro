@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body
+    class="bg-[url(./src/img/whiteKoi.jpg)] bg-white dark:bg-[url(./src/img/blackKoi.png)] dark:bg-black bg-contain bg-no-repeat bg-center bg-fixed h-screen">
+
+    <!-- Botón del menú -->
+    <div class="top-5 left-5 fixed bg-gray-800 hover:bg-gray-900 px-3 py-2 rounded-full text-white cursor-pointer"
+        onclick="toggleMenu()">
+        &#9776; <!-- Icono del menú -->
+    </div>
+
+    <!-- Barra lateral -->
+    <div id="sidebar"
+        class="top-0 left-0 z-50 fixed bg-black shadow-lg pt-16 w-0 h-full text-white transition-all duration-500 overflow-x-hidden ease-in-out">
+
+        <!--Boton de cerrar barra lateral-->
+        <a href="javascript:void(0)" class="top-5 right-5 absolute text-4xl cursor-pointer close-btn"
+            onclick="toggleMenu()">&times;</a>
+
+        <div class="block px-8 py-4 text-lg">
+            <a href="">About</a>
+        </div>
+        <div class="block px-8 py-4 text-lg">
+            <a href="">Skills</a>
+        </div>
+        <div class="block px-8 py-4 text-lg">
+            <a href="">Projects</a>
+        </div>
+        <div class="block px-8 py-4 text-lg">
+            <a href="">Contact</a>
+        </div>
+
+    </div>
+
+    <script is:inline>
+        function  toggleMenu() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
