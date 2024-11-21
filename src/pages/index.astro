@@ -1,3 +1,7 @@
+---
+import Card from "../components/card.astro";
+---
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -54,7 +58,7 @@
 
         <!-- Botón del menú -->
         <div
-            class="top-5 left-5 fixed bg-gray-800 hover:bg-gray-900 px-3 py-2 rounded-full text-white cursor-pointer"
+            class="top-5 left-5 fixed px-3 py-2 rounded-full text-white cursor-pointer"
             onclick="toggleMenu()"
         >
             &#9776; <!-- Icono del menú -->
@@ -73,22 +77,22 @@
             >
 
             <div class="block px-8 py-4 text-lg">
-                <a href="">About</a>
+                <a href="#intro">Introducción</a>
             </div>
             <div class="block px-8 py-4 text-lg">
-                <a href="">Skills</a>
+                <a href="#about">Sobre mí</a>
             </div>
             <div class="block px-8 py-4 text-lg">
-                <a href="">Projects</a>
+                <a href="#proye">Proyectos</a>
             </div>
             <div class="block px-8 py-4 text-lg">
-                <a href="">Contact</a>
+                <a href="#conta">Contacto</a>
             </div>
         </div>
 
         <div class="mx-6">
             <!--Sección introducción del portfolio-->
-            <section class="flex justify-center items-center md:px-60 h-screen">
+            <section id="intro" class="flex justify-center items-center md:px-60 h-screen">
                 <div class="flex flex-col-reverse md:grid md:grid-cols-2">
                     <!-- Texto introducción -->
                     <div class="flex flex-col justify-center gap-6 px-5 p-4">
@@ -96,7 +100,8 @@
                             ¡Bienvenido! 👋
                             <p class="md:mt-3">
                                 Soy <span class="text-purple-500"
-                                    >David Espetón</span>
+                                    >David Espetón</span
+                                >
                             </p>
                         </h1>
                         <p class="mt-4 text-gray-400 text-xl">
@@ -125,37 +130,39 @@
             </section>
 
             <!--Sección about me del portfolio-->
-            <section class="flex justify-center items-center md:px-60 h-screen">
+            <section id="about" class="flex justify-center items-center mb-16 px-4 md:px-60 min-h-screen">
                 <div class="grid">
                     <div class="flex flex-col md:grid md:grid-cols-3">
-                        <!--Imagen about me -->
+                        <!-- Imagen about me -->
                         <div
-                            class="flex justify-center md:justify-start items-center bg-red-500"
+                            class="flex justify-center md:justify-start items-center"
                         >
                             <img
                                 src="./src/img/gatomago.jpg"
                                 class="size-80 md:size-96"
                             />
                         </div>
-                        <!--Texto about me -->
+                        <!-- Texto about me -->
                         <div
                             class="flex flex-col justify-center md:col-span-2 px-5 p-4"
                         >
-                            <p class="flex justify-center md:justify-start font-bold text-3xl md:text-5xl">
+                            <p
+                                class="flex justify-center md:justify-start font-bold text-3xl md:text-5xl"
+                            >
                                 Sobre <span class="text-purple-500">Mí</span>
                             </p>
                             <p class="mt-4 text-gray-400 text-xl">
                                 ¡Saludos! Me llamo <span class="text-purple-500"
                                     >David Espetón</span
-                                >, soy un programador que actualmente esta
-                                cursando el grado superior de desarrollado de
+                                >, soy un programador que actualmente está
+                                cursando el grado superior de desarrollo de
                                 aplicaciones multiplataforma (DAM). Por el
-                                momento tengo conociemientos tanto de front-end
+                                momento tengo conocimientos tanto de front-end
                                 como de back-end, además cuento con experiencia
                                 en tecnologías como <span
                                     class="text-purple-500">HTML, CSS</span
                                 > y <span class="text-purple-500"
-                                    >JavasScript</span
+                                    >JavaScript</span
                                 >. Actualmente estoy mejorando mis habilidades
                                 en el front-end, aprendiendo y utilizando nuevas
                                 herramientas como <span class="text-purple-500">
@@ -166,43 +173,125 @@
                             </p>
                         </div>
                     </div>
-                    <!--Apartado de habilidades -->
-                    <div
-                        class="flex flex-col justify-center items-center mt-8"
-                    >
-                        <div class="flex justify-items-center">
-                            <p class="font-bold text-4xl">Skills</p>
+                    <!-- Apartado de habilidades -->
+                    <section class="flex flex-col items-center mt-8 px-4 md:px-20 lg:px-40">
+                        <div class="flex justify-center">
+                            <p class="font-bold text-3xl md:text-4xl">Skills</p>
                         </div>
-                        <div class="gap-8 grid grid-cols-3 md:grid-cols-5 mt-8">
-                            <img src="./src/img/html.png" class="w-20 h-20">
-                            <img src="./src/img/css.png" class="w-20 h-20">
-                            <img src="./src/img/js.png" class="w-20 h-20">
-                            <img src="./src/img/java.png" class="w-20 h-20">
-                            <img src="./src/img/c.png" class="w-20 h-20">
+                        <div class="gap-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 mt-8">
+                            <img src="./src/img/html.png" alt="HTML" class="w-16 md:w-20 h-16 md:h-20" />
+                            <img src="./src/img/css.png" alt="CSS" class="w-16 md:w-20 h-16 md:h-20" />
+                            <img src="./src/img/js.png" alt="JavaScript" class="w-16 md:w-20 h-16 md:h-20" />
+                            <img src="./src/img/java.png" alt="Java" class="w-16 md:w-20 h-16 md:h-20" />
+                            <img src="./src/img/c.png" alt="C" class="w-16 md:w-20 h-16 md:h-20" />
                         </div>
-                    </div>
+                    </section>
                 </div>
             </section>
             <!--Sección proyectos del porfolio -->
-            <section
-                class="flex justify-center items-center md:px-60 h-screen"
-            >   
-                <div class="flex flex-col">
-                    <div class="flex justify-center items-center bg-orange-500 mb-6 font-bold text-4xl">
+            <section id="proye" class="flex justify-center items-center px-4 md:px-20 lg:px-40 min-h-screen">
+                <div class="flex flex-col w-full">
+                    <div class="flex justify-center items-center mb-6 font-bold text-3xl md:text-5xl">
                         <p>MY PROJECTS</p>
                     </div>
-                    
-                    <div class="flex gap-10 [&_img]:w-80 [&_img]:h-80">
-                        <img src="./src/img/gatomago.jpg" alt="">
-                        <img src="./src/img/gatomago.jpg" alt="">
-                        <img src="./src/img/gatomago.jpg" alt="">
-                        <img src="./src/img/gatomago.jpg" alt="">
+            
+                    <div class="justify-items-center gap-12 md:gap-16 lg:gap-24 grid grid-cols-1 sm:grid-cols-2 mt-6">
+                        <Card src="./src/img/simondice.PNG">
+                            <h6 class="mb-2 text-purple-500 text-xl">Juego Simón dice</h6>
+                            <p class="text-white">
+                                Este proyecto es un juego de memoria donde los jugadores repiten secuencias de colores o sonidos, que se vuelven más largas y desafiantes en cada ronda.
+                            </p>
+                        </Card>
+                        <Card src="./src/img/maquina-virtual.png">
+                            <h6 class="mb-2 text-purple-500 text-xl">Máquina virtual</h6>
+                            <p class="text-white">
+                                Este proyecto simula una pequeña máquina virtual (VM) que contiene una serie de comandos utilizados para crear dentro de la propia VM un metaprograma.
+                            </p>
+                        </Card>
+                        <Card src="./src/img/memory.png">
+                            <h6 class="mb-2 text-purple-500 text-xl">Memory</h6>
+                            <p class="text-white">
+                                Este proyecto es un juego de cartas donde los jugadores buscan formar pares volteando cartas y recordando su posición para ganar.
+                            </p>
+                        </Card>
+                        <Card src="./src/img/port.PNG">
+                            <h6 class="mb-2 text-purple-500 text-xl">Portfolio</h6>
+                            <p class="text-white">
+                                Este proyecto lo he realizado mediante el framework de Astro, ayudándome también de Tailwind CSS, HTML y JavaScript.
+                            </p>
+                        </Card>
                     </div>
                 </div>
             </section>
             <!--Sección de contacto del portfolio -->
-            <section class="flex justify-center items-center md:px-60 h-screen">
-                <p class="text-8xl">AQUI VA LA PARTE DE CONTACTO</p>
+            <section id="conta" class="flex justify-center items-center md:px-60 h-screen">
+                <div class="flex flex-col items-center col-span-1">
+                    <div class="mb-8">
+                        <h1 class="text-5xl text-white">
+                            Contacto
+                        </h1>
+                    </div>
+                    <form
+                        id="subscriptionForm"
+                        class="bg-gray-950 mt-20 p-6 rounded-xl w-full h-full text-center card"
+                    >
+                        <h2
+                            class="flex font-semibold text-sm text-zinc-900 dark:text-zinc-100"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                                class="flex-none w-8 h-8"
+                            >
+                                <path
+                                    d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+                                    class="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+                                ></path>
+                                <path
+                                    d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+                                    class="stroke-zinc-400 dark:stroke-zinc-500"
+                                ></path>
+                            </svg>
+                            <span
+                                class="ml-3 font-[Starborn] font-bold text-[#D1B3C4] text-3xl dark:text-[#9F86C0]"
+                                >¿Quieres más información?</span
+                            >
+                        </h2>
+                        
+                        <div class="flex mt-6">
+                            <input
+                                type="email"
+                                placeholder="Email address"
+                                aria-label="Email address"
+                                required
+                                id="emailInput"
+                                class="flex-auto border-zinc-900/10 focus:border-purple-500 dark:focus:border-purple-500 dark:border-zinc-700 bg-gray-950 shadow-md shadow-zinc-800/5 px-3 py-[calc(theme(spacing.2)-1px)] border rounded-md focus:ring-4 focus:ring-teal-500/10 dark:focus:ring-teal-400/10 min-w-0 sm:text-sm dark:placeholder:text-zinc-500 dark:text-purple-500 appearance-none focus:outline-none"
+                            />
+                            <button
+                                type="submit"
+                                id="submitButton"
+                                class="inline-flex flex-none justify-center items-center gap-2 bg-[#D1B3C4] hover:bg-[#B392AC] dark:hover:bg-zinc-600 active:bg-[#D1B3C4] dark:active:bg-zinc-700 dark:bg-zinc-700 ml-4 px-3 py-2 rounded-md font-semibold text-[#B392AC] text-sm hover:text-[#D1B3C4] active:text-[#B392AC] dark:active:text-zinc-100/70 transition active:transition-none outline-offset-2"
+                            >
+                                Send
+                            </button>
+                        </div>
+                        <div
+                            id="successMessage"
+                            class="hidden mt-2 text-green-500 text-sm"
+                        >
+                            Thanks for subscribing! You'll hear from us soon.
+                        </div>
+                        <div
+                            id="errorMessage"
+                            class="hidden mt-2 text-red-500 text-sm"
+                        >
+                        </div>
+                    </form>
+                </div>
             </section>
         </div>
     </body>

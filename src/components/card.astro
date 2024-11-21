@@ -1,0 +1,17 @@
+---
+interface Props {
+    src: string;
+}
+const { src } = Astro.props;
+---
+
+<div
+    class="relative flex flex-col bg-gray-950 shadow-sm my-6 rounded-lg w:60 md:w-96"
+>
+    <div class="relative m-2.5 rounded-md h-56 text-white overflow-hidden">
+        <img src={src} alt="Image" />
+    </div>
+    <div class="p-4">
+        <slot />
+    </div>
+</div>
